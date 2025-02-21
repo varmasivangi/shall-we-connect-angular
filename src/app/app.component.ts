@@ -1,4 +1,4 @@
-import { isPlatformBrowser } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, ElementRef, ViewChild, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 import { io } from 'socket.io-client';
@@ -6,7 +6,7 @@ import { io } from 'socket.io-client';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,CommonModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
@@ -27,14 +27,14 @@ export class AppComponent implements AfterViewInit {
 
   constructor(private route: ActivatedRoute, private router: Router,@Inject(PLATFORM_ID) private platformId: any) {
     if (isPlatformBrowser(this.platformId)) {
-      this.socket = io("http://localhost:3000"); // Change to your backend URL
+      this.socket = io("https://shall-we-connect-backend.onrender.com"); // Change to your backend URL
     }
 
     // Get meeting ID from URL
     this.route.queryParams.subscribe(params => {
       if (params['meeting']) {
         this.meetingId = params['meeting'];
-        this.joinMeeting();
+        
       }
     });
   }

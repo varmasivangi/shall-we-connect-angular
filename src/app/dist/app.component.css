@@ -1,0 +1,114 @@
+/* General Container */
+.meeting-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #1c1c1e;
+  /* Dark Zoom-like background */
+  color: white;
+  font-family: "Arial", sans-serif;
+}
+
+/* Video Grid */
+.video-grid {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 900px;
+  height: 60vh;
+}
+
+/* Video Box Styling */
+.video-box {
+  width: 48%;
+  height: 100%;
+  background: black;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Local Video */
+.local {
+  border: 2px solid #4caf50;
+}
+
+/* Remote Video */
+.remote {
+  border: 2px solid #007bff;
+}
+
+/* Meeting Controls */
+.meeting-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Button Styles */
+.btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 5px;
+  border: none;
+}
+
+.btn.primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn.secondary {
+  background-color: #ff6f61;
+  color: white;
+}
+
+.btn.join-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Meeting Link Input */
+.meeting-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.link-box {
+  background: #333;
+  border: 1px solid #555;
+  padding: 10px;
+  color: white;
+  width: 250px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Hover Effects */
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .video-grid {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .video-box {
+    width: 90%;
+    height: 40vh;
+  }
+}

@@ -62,13 +62,12 @@ var AppComponent = /** @class */ (function () {
             iceServers: [{ urls: 'stun:stun.l.google.com:19302' }]
         };
         if (common_1.isPlatformBrowser(this.platformId)) {
-            this.socket = socket_io_client_1.io("http://localhost:3000"); // Change to your backend URL
+            this.socket = socket_io_client_1.io("https://shall-we-connect-backend.onrender.com"); // Change to your backend URL
         }
         // Get meeting ID from URL
         this.route.queryParams.subscribe(function (params) {
             if (params['meeting']) {
                 _this.meetingId = params['meeting'];
-                _this.joinMeeting();
             }
         });
     }
@@ -213,7 +212,7 @@ var AppComponent = /** @class */ (function () {
         core_1.Component({
             selector: 'app-root',
             standalone: true,
-            imports: [router_1.RouterOutlet],
+            imports: [router_1.RouterOutlet, common_1.CommonModule],
             templateUrl: './app.component.html',
             styleUrls: ['./app.component.scss']
         }),
