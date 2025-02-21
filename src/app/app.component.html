@@ -1,0 +1,12 @@
+<div class="video-container">
+  <video #localVideo autoplay muted></video>
+  <video #remoteVideo autoplay></video>
+</div>
+
+<div class="controls">
+  <button (click)="generateMeetingLink()">Generate Meeting Link</button>
+  <input type="text" [value]="meetingLink" readonly />
+  <button (click)="copyLink()">Copy</button>
+</div>
+
+<router-outlet></router-outlet>
