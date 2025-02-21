@@ -48,7 +48,6 @@ exports.__esModule = true;
 exports.AppComponent = void 0;
 var common_1 = require("@angular/common");
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
 var socket_io_client_1 = require("socket.io-client");
 var AppComponent = /** @class */ (function () {
     function AppComponent(route, router, platformId) {
@@ -103,7 +102,7 @@ var AppComponent = /** @class */ (function () {
     AppComponent.prototype.generateMeetingLink = function () {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                this.meetingId = Math.random().toString(36).substring(2, 10); // Generate unique ID
+                this.meetingId = Math.random().toString(36).substring(2, 10);
                 this.meetingLink = window.location.origin + "/video-call?meeting=" + this.meetingId;
                 return [2 /*return*/];
             });
@@ -111,7 +110,6 @@ var AppComponent = /** @class */ (function () {
     };
     AppComponent.prototype.copyLink = function () {
         navigator.clipboard.writeText(this.meetingLink).then(function () {
-            alert("Meeting link copied!");
         });
     };
     AppComponent.prototype.joinMeeting = function () {
@@ -202,6 +200,18 @@ var AppComponent = /** @class */ (function () {
             });
         }); });
     };
+    AppComponent.prototype.leaveMeeting = function () {
+        if (this.localStream) {
+            this.localStream.getTracks().forEach(function (track) { return track.stop(); });
+        }
+        if (this.peerConnection) {
+            this.peerConnection.close();
+        }
+        this.socket.emit("leave-meeting", { meetingId: this.meetingId });
+        this.meetingId = '';
+        this.meetingLink = '';
+        this.router.navigate(['/']);
+    };
     __decorate([
         core_1.ViewChild('localVideo')
     ], AppComponent.prototype, "localVideo");
@@ -212,7 +222,7 @@ var AppComponent = /** @class */ (function () {
         core_1.Component({
             selector: 'app-root',
             standalone: true,
-            imports: [router_1.RouterOutlet, common_1.CommonModule],
+            imports: [common_1.CommonModule],
             templateUrl: './app.component.html',
             styleUrls: ['./app.component.scss']
         }),

@@ -1,233 +1,233 @@
-// /* General Styles */
-// body {
-//     font-family: 'Arial', sans-serif;
-//     margin: 0;
-//     padding: 0;
-//     background-color: #f4f4f9;
-//     color: #333;
-//   }
-  
-//   .meeting-container {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     height: 100vh;
-//     padding: 20px;
-//     box-sizing: border-box;
-//   }
-  
-//   /* Video Container */
-//   .video-container {
-//     display: flex;
-//     justify-content: center;
-//     gap: 20px;
-//     width: 100%;
-//     max-width: 1200px;
-//     margin-bottom: 20px;
-//   }
-  
-//   .local-video,
-//   .remote-video {
-//     width: 48%;
-//     max-width: 600px;
-//     border-radius: 10px;
-//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-//     background-color: #000;
-//   }
-  
-//   /* Controls */
-//   .controls {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     gap: 15px;
-//     width: 100%;
-//     max-width: 600px;
-//   }
-  
-//   .control-button {
-//     padding: 10px 20px;
-//     font-size: 16px;
-//     border: none;
-//     border-radius: 5px;
-//     cursor: pointer;
-//     transition: background-color 0.3s ease;
-//   }
-  
-//   .generate-link {
-//     background-color: #0078d7;
-//     color: white;
-//   }
-  
-//   .generate-link:hover {
-//     background-color: #005bb5;
-//   }
-  
-//   .copy-link {
-//     background-color: #4caf50;
-//     color: white;
-//   }
-  
-//   .copy-link:hover {
-//     background-color: #45a049;
-//   }
-  
-//   .join-button {
-//     background-color: #ff5722;
-//     color: white;
-//   }
-  
-//   .join-button:hover {
-//     background-color: #e64a19;
-//   }
-  
-//   /* Link Container */
-//   .link-container {
-//     display: flex;
-//     width: 100%;
-//     gap: 10px;
-//   }
-  
-//   .meeting-link-input {
-//     flex: 1;
-//     padding: 10px;
-//     font-size: 14px;
-//     border: 1px solid #ccc;
-//     border-radius: 5px;
-//     background-color: #fff;
-//     color: #333;
-//   }
-  
-//   /* Responsive Design */
-//   @media (max-width: 768px) {
-//     .video-container {
-//       flex-direction: column;
-//     }
-  
-//     .local-video,
-//     .remote-video {
-//       width: 100%;
-//     }
-  
-//     .controls {
-//       width: 90%;
-//     }
-//   }
-
-
-
-/* General Container */
-.meeting-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #1c1c1e; /* Dark Zoom-like background */
-    color: white;
+/* General Styles */
+body {
     font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
   }
   
-  /* Video Grid */
-  .video-grid {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    max-width: 900px;
-    height: 60vh;
-  }
-  
-  /* Video Box Styling */
-  .video-box {
-    width: 48%;
-    height: 100%;
-    background: black;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
-  }
-  
-  /* Local Video */
-  .local {
-    border: 2px solid #4caf50;
-  }
-  
-  /* Remote Video */
-  .remote {
-    border: 2px solid #007bff;
-  }
-  
-  /* Meeting Controls */
-  .meeting-controls {
+  .meeting-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
   }
   
-  /* Button Styles */
-  .btn {
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    margin: 5px;
-    border: none;
-  }
-  
-  .btn.primary {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .btn.secondary {
-    background-color: #ff6f61;
-    color: white;
-  }
-  
-  .btn.join-btn {
-    background-color: #28a745;
-    color: white;
-  }
-  
-  /* Meeting Link Input */
-  .meeting-link {
+  /* Video Container */
+  .video-container {
     display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+  }
+  
+  .local-video,
+  .remote-video {
+    width: 48%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #000;
+  }
+  
+  /* Controls */
+  .controls {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
   }
   
-  .link-box {
-    background: #333;
-    border: 1px solid #555;
-    padding: 10px;
-    color: white;
-    width: 250px;
+  .control-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
     border-radius: 5px;
-    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   
-  /* Hover Effects */
-  .btn:hover {
-    opacity: 0.8;
+  .generate-link {
+    background-color: #0078d7;
+    color: white;
   }
   
-  /* Responsive */
+  .generate-link:hover {
+    background-color: #005bb5;
+  }
+  
+  .copy-link {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .copy-link:hover {
+    background-color: #45a049;
+  }
+  
+  .join-button {
+    background-color: #ff5722;
+    color: white;
+  }
+  
+  .join-button:hover {
+    background-color: #e64a19;
+  }
+  
+  /* Link Container */
+  .link-container {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  .meeting-link-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* Responsive Design */
   @media (max-width: 768px) {
-    .video-grid {
+    .video-container {
       flex-direction: column;
-      height: auto;
     }
   
-    .video-box {
+    .local-video,
+    .remote-video {
+      width: 100%;
+    }
+  
+    .controls {
       width: 90%;
-      height: 40vh;
     }
   }
+
+
+
+// /* General Container */
+// .meeting-container {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100vh;
+//     background: #1c1c1e; /* Dark Zoom-like background */
+//     color: white;
+//     font-family: 'Arial', sans-serif;
+//   }
+  
+//   /* Video Grid */
+//   .video-grid {
+//     display: flex;
+//     gap: 10px;
+//     justify-content: center;
+//     align-items: center;
+//     width: 90%;
+//     max-width: 900px;
+//     height: 60vh;
+//   }
+  
+//   /* Video Box Styling */
+//   .video-box {
+//     width: 48%;
+//     height: 100%;
+//     background: black;
+//     border-radius: 10px;
+//     object-fit: cover;
+//     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+//   }
+  
+//   /* Local Video */
+//   .local {
+//     border: 2px solid #4caf50;
+//   }
+  
+//   /* Remote Video */
+//   .remote {
+//     border: 2px solid #007bff;
+//   }
+  
+//   /* Meeting Controls */
+//   .meeting-controls {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     margin-top: 20px;
+//   }
+  
+//   /* Button Styles */
+//   .btn {
+//     padding: 12px 20px;
+//     border-radius: 8px;
+//     font-size: 16px;
+//     font-weight: bold;
+//     cursor: pointer;
+//     transition: all 0.3s ease-in-out;
+//     margin: 5px;
+//     border: none;
+//   }
+  
+//   .btn.primary {
+//     background-color: #007bff;
+//     color: white;
+//   }
+  
+//   .btn.secondary {
+//     background-color: #ff6f61;
+//     color: white;
+//   }
+  
+//   .btn.join-btn {
+//     background-color: #28a745;
+//     color: white;
+//   }
+  
+//   /* Meeting Link Input */
+//   .meeting-link {
+//     display: flex;
+//     align-items: center;
+//     gap: 10px;
+//     margin-top: 10px;
+//   }
+  
+//   .link-box {
+//     background: #333;
+//     border: 1px solid #555;
+//     padding: 10px;
+//     color: white;
+//     width: 250px;
+//     border-radius: 5px;
+//     text-align: center;
+//   }
+  
+//   /* Hover Effects */
+//   .btn:hover {
+//     opacity: 0.8;
+//   }
+  
+//   /* Responsive */
+//   @media (max-width: 768px) {
+//     .video-grid {
+//       flex-direction: column;
+//       height: auto;
+//     }
+  
+//     .video-box {
+//       width: 90%;
+//       height: 40vh;
+//     }
+//   }
   

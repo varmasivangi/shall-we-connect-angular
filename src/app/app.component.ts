@@ -6,7 +6,7 @@ import { io } from 'socket.io-client';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,CommonModule],
+  imports: [CommonModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
@@ -73,13 +73,13 @@ export class AppComponent implements AfterViewInit {
   
 
   async generateMeetingLink() {
-    this.meetingId = Math.random().toString(36).substring(2, 10); // Generate unique ID
+    this.meetingId = Math.random().toString(36).substring(2, 10); 
     this.meetingLink = `${window.location.origin}/video-call?meeting=${this.meetingId}`;
   }
 
   copyLink() {
     navigator.clipboard.writeText(this.meetingLink).then(() => {
-      alert("Meeting link copied!");
+     
     });
   }
 
@@ -122,4 +122,23 @@ export class AppComponent implements AfterViewInit {
       }
     });
   }
+
+
+  leaveMeeting() {
+    if (this.localStream) {
+      this.localStream.getTracks().forEach(track => track.stop()); 
+    }
+  
+    if (this.peerConnection) {
+      this.peerConnection.close(); 
+    }
+  
+    this.socket.emit("leave-meeting", { meetingId: this.meetingId }); 
+  
+    this.meetingId = ''; 
+    this.meetingLink = '';
+  
+    this.router.navigate(['/']); 
+  }
+  
 }
