@@ -1,1 +1,66 @@
-<p>home works!</p>
+<!-- dashboard.component.html -->
+<div class="dashboard container p-5">
+
+    
+    <div class="row g-4">
+      <!-- 1. Direct Chats -->
+      <div class="col-12 col-md-6 col-xl-3">
+        <div class="card border-0 shadow-sm h-100 hover-lift">
+          <div class="card-body text-center p-4">
+            <div class="icon-circle bg-primary mb-3">
+              <i class="fas fa-comment-dots fa-2x text-white"></i>
+            </div>
+            <h3 class="h5 fw-bold mb-2">Direct Chats</h3>
+            <p class="text-muted small mb-4">Message friends & colleagues</p>
+            <div class="badge bg-primary-subtle text-primary">12 New</div>
+          </div>
+          <a routerLink="/chat-room" class="stretched-link"></a>
+        </div>
+      </div>
+  
+      <!-- 2. Practice Interviews -->
+      <div class="col-12 col-md-6 col-xl-3">
+        <div class="card border-0 shadow-sm h-100 hover-lift">
+          <div class="card-body text-center p-4">
+            <div class="icon-circle bg-success mb-3">
+              <i class="fas fa-video fa-2x text-white"></i>
+            </div>
+            <h3 class="h5 fw-bold mb-2">Practice Interviews</h3>
+            <p class="text-muted small mb-4">Mock sessions with peers</p>
+            <div class="badge bg-success-subtle text-success">3 Scheduled</div>
+          </div>
+          <a routerLink="/mock-interview-room" class="stretched-link"></a>
+        </div>
+      </div>
+  
+      <!-- 3. Job Board -->
+      <div class="col-12 col-md-6 col-xl-3">
+        <div class="card border-0 shadow-sm h-100 hover-lift">
+          <div class="card-body text-center p-4">
+            <div class="icon-circle bg-warning mb-3">
+              <i class="fas fa-briefcase fa-2x text-white"></i>
+            </div>
+            <h3 class="h5 fw-bold mb-2">Job Board</h3>
+            <p class="text-muted small mb-4">Find your next opportunity</p>
+            <div class="badge bg-warning-subtle text-warning">45 New Posts</div>
+          </div>
+          <a routerLink="/hire-room" class="stretched-link"></a>
+        </div>
+      </div>
+  
+      <!-- 4. Community Feed -->
+      <div class="col-12 col-md-6 col-xl-3">
+        <div class="card border-0 shadow-sm h-100 hover-lift">
+          <div class="card-body text-center p-4">
+            <div class="icon-circle bg-purple mb-3">
+              <i class="fas fa-newspaper fa-2x text-white"></i>
+            </div>
+            <h3 class="h5 fw-bold mb-2">Community Feed</h3>
+            <p class="text-muted small mb-4">Share & discuss posts</p>
+            <div class="badge bg-purple-subtle text-purple">568 Updates</div>
+          </div>
+          <a routerLink="/posts-room" class="stretched-link"></a>
+        </div>
+      </div>
+    </div>
+  </div>

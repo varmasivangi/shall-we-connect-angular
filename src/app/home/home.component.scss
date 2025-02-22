@@ -1,0 +1,31 @@
+/* Custom Styles */
+.hover-lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 12px;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1)!important;
+  }
+  
+  .icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .bg-purple {
+    background-color: #7367f0;
+  }
+  
+  .bg-purple-subtle {
+    background-color: rgba(115, 103, 240, 0.15);
+  }
+  
+  .text-purple {
+    color: #7367f0!important;
+  }

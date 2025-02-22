@@ -1,0 +1,115 @@
+
+.site-header {
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.connect-logo {
+  display: flex;
+  align-items: center;
+  color: white !important;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+}
+
+.logo-text {
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+}
+
+.nav-link {
+  color: rgba(255,255,255,0.9) !important;
+  padding: 0.5rem 1.5rem !important;
+  transition: all 0.3s ease;
+}
+
+.hover-underline {
+  position: relative;
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.hover-underline:hover::after {
+  width: 100%;
+}
+
+.search-container {
+  position: relative;
+  margin-right: 1.5rem;
+}
+
+.search-input {
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  width: 200px;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  width: 250px;
+  outline: none;
+}
+
+.search-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #6366f1;
+}
+
+.avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.avatar:hover img {
+  transform: scale(1.1);
+}
+
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-top: 10px;
+}
+
+.dropdown-item {
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: #f8f9fa;
+  padding-left: 2rem;
+}
+
+@media (max-width: 992px) {
+  .header-actions {
+    margin-top: 1rem;
+  }
+  
+  .search-container {
+    margin-bottom: 1rem;
+  }
+}

@@ -1,1 +1,18 @@
-<p>video-call works!</p>
+<div class="meeting-container">
+
+    <div class="video-container">
+      <video #localVideo autoplay muted class="local-video"></video>
+      <video #remoteVideo autoplay class="remote-video"></video>
+    </div>
+  
+  
+    <div class="controls">
+      <button (click)="generateMeetingLink()" class="control-button generate-link">Generate Meeting Link</button>
+      <div class="link-container">
+        <input type="text" [value]="meetingLink" readonly class="meeting-link-input" />
+        <button (click)="copyLink()" class="control-button copy-link">Copy</button>
+      </div>
+      <button *ngIf="meetingId" (click)="joinMeeting()" class="control-button join-button">Join Meeting</button>
+      <button *ngIf="meetingId" (click)="leaveMeeting();" class="btn leave-btn">Leave Meeting</button>
+    </div>
+  </div>

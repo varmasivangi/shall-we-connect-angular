@@ -1,0 +1,116 @@
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.meeting-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Video Container */
+.video-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+
+.local-video,
+.remote-video {
+  width: 48%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #000;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.control-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.generate-link {
+  background-color: #0078d7;
+  color: white;
+}
+
+.generate-link:hover {
+  background-color: #005bb5;
+}
+
+.copy-link {
+  background-color: #4caf50;
+  color: white;
+}
+
+.copy-link:hover {
+  background-color: #45a049;
+}
+
+.join-button {
+  background-color: #ff5722;
+  color: white;
+}
+
+.join-button:hover {
+  background-color: #e64a19;
+}
+
+/* Link Container */
+.link-container {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.meeting-link-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .video-container {
+    flex-direction: column;
+  }
+
+  .local-video,
+.remote-video {
+    width: 100%;
+  }
+
+  .controls {
+    width: 90%;
+  }
+}
